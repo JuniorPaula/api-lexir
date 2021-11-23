@@ -1,8 +1,14 @@
+import Carro from '../models/Carro';
+
 class HomeController {
-  index(req, res) {
-    res.json({
-      tudoCerto: true,
+  async index(req, res) {
+    const newCar = await Carro.create({
+      marca: 'S',
+      modelo: 'Tesla',
+      ano: '2019',
+      preco: 130.000,
     });
+    res.json(newCar);
   }
 }
 

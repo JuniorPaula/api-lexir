@@ -1,3 +1,10 @@
+/** cofigurar o dotenv para variáveis de ambiente */
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+import './database';
+
 import express from 'express';
 
 /** importar as rotas */
