@@ -5,7 +5,7 @@ class HomeController {
   async create(req, res) {
     try {
       const newCar = await Carro.create(req.body);
-      return res.json(newCar);
+      return res.status(201).json(newCar);
     } catch (e) {
       return res.status(400).json({
         errors: e.errors.map((err) => err.message),
